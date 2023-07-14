@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bookstore.css">
+    <style>
+        .cards{
+    display:flex;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(71, 70, 70, 0.742);
+
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    font-family: arial;
+    width: 20%;
+  }
+  .cards.card .h2{
+    font-family: var(--Abel);
+  }
+  img{
+    width:180px;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+        * {
+            box-sizing: border-box;
+        }
+        :root{
+    
+    /*      Theme colors        */
+    --text-gray: #3f4954;
+    --text-light : #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin : 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic : 'Livvic', cursive;
+}
+
+
+        body {
+            background:#ddd;
+            
+           
+        }
+h1{
+    font-size:50px ;
+}
+        /* Style the header */
+
+        header {
+
+background: linear-gradient(45deg, #141416, #cdcde0);         
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+
+        nav {
+            
+            /* only for demonstration, should be removed */
+            background: linear-gradient(45deg, #be6f41, #cdcde0);
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+
+        nav ul a{
+            list-style-type: none;
+            padding: 0;
+            color:black;
+        }
+
+        article {
+            padding: 20px;
+            background: linear-gradient(45deg, #be6f41, #cdcde0);
+            height: 300px;
+
+            /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        footer a{
+            color:black;
+            margin: 8px;
+            font-size: 20px;
+        }
+        footer h3,h2{
+            color:black;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .wdimg0{
+            display:inline-flex
+            justify-content: space-between;
+        }
+        .wdimg1{
+            float:right;
+            width:50%;
+           
+            
+        }
+         .wdimg1 {
+        
+            margin:230px;
+            
+        }
+
+        .wdimg {
+            float:right;
+            width:50%;
+            background-color:rgb(26, 25, 25);
+           
+        }
+        .wdimg a{
+            margin:230px;
+            opacity: .6;
+            
+            margin-left: 52%;
+            
+        }
+        .wdimg h2{
+            color: rgb(218, 218, 218);
+            margin-left: 42%;
+        }
+
+        .wr ::after{
+            
+            float:left;
+           width: 100%;
+           
+            
+            content: " ";
+  clear: both;
+  display: table;
+            
+        }
+        .wr1{
+           
+  width: 30.33%;
+  background: rgb(17, 16, 16,.9);
+  float:left;
+  margin: 10px;
+
+        }
+        .wr1 img{
+            margin: 10%;
+        }
+        .wr2{
+            background: rgb(17, 16, 16,.9);
+           float:left;
+  width: 30.33%;
+  
+  margin: 10px;
+        }
+
+        .wr3{
+            background: rgb(17, 16, 16,.9);
+           float:right;
+  width: 30.33%;
+  margin: 10px;
+  
+        }
+        .wr3 img{
+            margin: 10%;
+        }
+        .wr h2{
+            color: rgb(218, 218, 218);
+        }
+        footer{
+            padding:20px;
+        }
+        .topnav {
+  overflow: hidden;
+  background: linear-gradient(45deg, #be6f41, #cdcde0);
+  
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+  border-radius: 25px;
+ 
+ 
+  width: 180px;
+  height: 60px;  
+}
+
+.topnav a:hover {
+    background: linear-gradient(45deg, #888684, #cdcde0);
+  color: black;
+}
+.container{
+    padding:10px;
+    background-color:#ddd;
+
+}
+.sample{
+    background-color: #ddd;
+
+}
+.heading{
+    font-family: 'Brush Script MT', cursive;
+width: 100%;
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+}
+.eplogo{
+    
+ 
+     width:99%;
+     height: 90%;
+    
+     justify-content: space-between;
+     display: inline;
+     margin-right: 90%;
+     padding: 20px;
+}
+.eplogo img{
+    width:10%;;
+     height: 9%;
+    
+}
+.pb{
+    margin-right: 30%;
+    margin-left: 70%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    height: 96%;
+    width: 60%;
+    padding: 1%;
+    font-family: var(--Abel);
+    color: var(--bg-color);
+   font-size: 220%;
+
+   border-radius:40%;
+
+}
+.pb:hover{
+    transition:1s ;
+    letter-spacing: 3px;
+}
+
+.pbb{
+    background-color: lightgrey;
+  width: 300px;
+  border: 15px solid rgb(45, 45, 65);
+  padding: 40px;
+  margin: 20px;
+  text-align:left;
+  font-family: var(--Abel);
+}
+.pbb1{
+    background-color: lightgrey;
+  width: 300px;
+  border: 15px solid rgb(45, 45, 65);
+  padding: 50px;
+  margin: 20px;
+  font-family: var(--Abel);
+  text-align:left;
+}
+.pbb2{
+    background-color: lightgrey;
+  width: 300px;
+  border: 15px solid rgb(45, 45, 65);
+  padding: 50px;
+  font-family: var(--Abel);
+  margin: 20px;
+  text-align:left;
+}   
+.pbb0{
+    display: flex;
+    justify-content: space-between;
+
+}
+ 
+.search-box {
+        position:absolute;
+        top: 26%;
+        left: 89%;
+        transform: translate(-50%, -50%);
+        background: #9e9c9c;
+        height: 40px;
+        border-radius: 40px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .search-box:hover > .search-txt {
+        width: 240px;
+        padding: 0 6px;
+      }
+      .search-box:hover > .search-btn {
+        background: white;
+        color: black;
+      }
+      .search-btn {
+        color: #eeeeee;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #2f3640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .search-btn > i {
+        font-size: 20px;
+      }
+      .search-txt {
+        border: none;
+        background: none;
+        outline: none;
+        padding: 0;
+        color: black;
+        font-size: 16px;
+        font-family: var(--Abel);
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+       
+      }
+}
+.tpnv .search{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.inc{
+    margin-left:23% ;
+    height: 490px;
+    margin-right: 20%;
+
+
+}
+.wr2 .inc img{
+    margin:10px;
+    
+}
+.rb{
+    margin-left:35% ;
+    
+}
+.fact{
+    margin: 3%;
+    
+    width: 50%;
+
+   
+}
+
+.fact h1:hover{
+    transition:1s ;
+    letter-spacing: 3px;
+}
+.fact2 h2{
+    font-family: var(--Abel);
+    float: right;
+    width: 50%;
+    background-color: black;
+    padding: 40px;
+    color: #ddd;
+
+}
+.fact0 .fact2 h1:hover{
+    letter-spacing: 3px;
+    transition:1s ;
+}
+.fact2 h1{
+    padding: 40px;
+}
+}
+.fact2 h1:hover{
+    letter-spacing: 3px;
+    transition:1s ;
+    border-radius: 35%;
+    opacity: 1;
+
+}
+.fact0{
+    display: flex;
+    
+}
+.pbb0 .pbb:hover{
+    letter-spacing: 3px;
+    transition:1s ;
+}
+.pbb0 .pbb1:hover{
+    letter-spacing: 3px;
+    transition:1s ;
+}
+.pbb0 .pbb2:hover{
+    letter-spacing: 3px;
+    transition:1s ;
+}
+.sb{
+    padding-left: 32%;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+  
+    <header>
+        <div class ="eplogo">
+            <img src="https://i.ibb.co/3NNfGjv/EP-removebg-preview.png" alt="EP-removebg-preview" border="0">
+            
+        </div>
+        
+    </header>
+    <section>
+        <article>
+            <div class="tpnv">
+                <div class="search-box">
+                    <input type="text" name="name" class="search-txt" placeholder="Type to search" />
+                    <a class="search-btn" href="#">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+    <span class="topnav">
+        <a  href="home.hbs">Home</a>
+        <a href="#Publish with us">Publish with us</a>
+        <a href="bookstore.html">Book Store</a>
+        {{!-- <a href="#Book Calculator">Book Calculator</a> --}}
+        <a href="login.hbs">Author Dashboard</a>
+    </span>
+</div>
+    
+<h2 class="pb">Write here<br>Spread Everywhere</h2>
+<body>
+    <div class="sb">
+    <H1>Our Best Selling Books</H1>
+</div>
+    <div class="cards">
+<div class="card">
+    <img src="https://i.ibb.co/yF774N7/Whats-App-Image-2023-04-24-at-10-33-26-PM.jpg" >
+        
+    <h2>LIFE IS A CHANCE</h2>
+    <p class="price">450 INR</p>
+    <p>Some text about the Book..</p>
+    <p><button>Add to Cart</button></p>
+  </div> 
+
+  <div class="card">
+    <img src="https://i.ibb.co/d5rnm6q/Whats-App-Image-2023-04-24-at-10-39-09-PM.jpg" >
+        
+    <h2>Jashn-e-Roshan</h2>
+    <p class="price">450 INR</p>
+    <p>Some text about the Book..</p>
+    <p><button>Add to Cart</button></p>
+  </div> 
+  <div class="card">
+  <img src="https://i.ibb.co/QKSqfRJ/Whats-App-Image-2023-04-24-at-10-39-26-PM.jpg">
+        
+    <h2>SMILE PLEASE!</h2>
+    <p class="price">350 INR</p>
+    <p>Some text about the Book..</p>
+    <p><button>Add to Cart</button></p>
+  </div> 
+
+  
+</div>
+<div class="cards">
+    <div class="card">
+ <img src="https://i.ibb.co/dgTGBKG/Whats-App-Image-2023-04-24-at-10-40-16-PM.jpg" >
+            
+        <h2>GOD</h2>
+        <p class="price">450 INR</p>
+        <p>Some text about the Book..</p>
+        <p><button>Add to Cart</button></p>
+      </div> 
+      <div class="card">
+<img src="https://i.ibb.co/CKJ8L8p/Whats-App-Image-2023-04-24-at-10-34-52-PM.jpg" >
+           
+        <h2>The Inked Solace</h2>
+        <p class="price">350 INR</p>
+        <p>Some text about the Book..</p>
+        <p><button>Add to Cart</button></p>
+      </div> 
+      <div class="card">
+        <img src="https://i.ibb.co/qJjN51s/Whats-App-Image-2023-04-24-at-11-04-16-PM.jpg">
+             
+        <h2>Potter World</h2>
+        <p class="price">450 INR</p>
+        <p>Some text about the Book..</p>
+        <p><button>Add to Cart</button></p>
+      </div> 
+      
+</div>
+<div class="cards">
+    <div class="card">
+        <img src="https://i.ibb.co/Jt8cNp8/Whats-App-Image-2023-04-24-at-11-06-47-PM.jpg"> 
+
+        <h2 >LOADS OF LOVE</h2>
+        <p class="price">350 INR</p>
+        <p>Some text about the Book..</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+      <div class="card">
+  <img src="https://i.ibb.co/3d2sTbS/Whats-App-Image-2023-04-24-at-11-06-47-PM-1.jpg" >
+            
+        <h2>INCARNATION</h2>
+        <p class="price">550 INR</p>
+        <p>Some text about the Book..</p>
+        <p><button>Add to Cart</button></p>
+      </div> 
+      <div class="card">
+      <img src="https://i.ibb.co/gZRM6YN/Whats-App-Image-2023-04-24-at-11-06-48-PM.jpg">
+             
+        <h2>EUPHORIA</h2>
+        <p class="price">450 INR</p>
+        <p>Some text about the Book..</p>
+        <p><button>Add to Cart</button></p>
+      </div> 
+</div>
+<footer>
+    <h2 align="center" > Founder: Devansh Saxena</h2>
+   
+    <h3 align="center" >Bareilly | Uttar Pradesh | India</h3>
+    <h3 align="center" >+917310545919 | Devanshsaxena945@gmail.com</h3>
+    
+    <a href='#'><i class="fa fa-instagram"></i></a>
+    <a href='#'><i class="fa fa-facebook-square"></i></a>
+    <a href='#'><i class="fa fa-twitter"></i></a>
+    <a href='#'><i class="fa fa-linkedin"></i></a>
+    
+</footer>
+
+</body>
+</html>
